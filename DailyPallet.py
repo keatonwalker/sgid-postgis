@@ -11,7 +11,12 @@ from forklift import core
 from forklift.models import Pallet
 
 
-class LocatePallet(Pallet):
+class SgidDailyPallet(Pallet):
+    def __init__(self):
+        super(SgidDailyPallet, self).__init__()
+        self.destination_coordinate_system = 26912
+        self.geographic_transformation = None
+    
     def build(self, target):
 
         self.sgid = path.join(self.garage, 'SGID10.sde')
