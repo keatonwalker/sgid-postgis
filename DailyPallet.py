@@ -20,7 +20,7 @@ class SgidDailyPallet(Pallet):
     def build(self, target):
 
         self.sgid = path.join(self.garage, 'SGID10.sde')
-        self.cloud_port = r'C:\CloudPort'
+        self.cloud_port = self.staging_rack
 
         self.bioscience = path.join(self.cloud_port, 'bioscience.gdb')
         self.boundaries = path.join(self.cloud_port, 'boundaries.gdb')
@@ -81,7 +81,7 @@ class SgidDailyPallet(Pallet):
             'DWMRCLLRWUMillFacilities',
             'DWMRCSolidWasteFacilities',
             'DWQAssessmentUnits',
-            'DWQGroundWaterPermits',
+            'DWQGroundwaterPermits',
             'DWQMonitoredLakes132',
             'EWA',
             'FACILITYUST',
